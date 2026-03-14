@@ -15,7 +15,7 @@ Methodologies help — if you remember to follow them. At 2am fixing a productio
 | Skill | What it does | Key rules |
 |-------|-------------|-----------|
 | **harness-constrain** | Draws red lines AI cannot cross | Permission tiers, dangerous operation interception, scope limits |
-| **harness-inform** | Feeds AI the context it needs | Project scanning, CLAUDE.md generation, knowledge crystallization loop |
+| **harness-inform** | Feeds AI the context it needs | Project scanning, AGENTS.md generation, knowledge crystallization loop |
 | **harness-verify** | Forces verification before "done" | Auto lint/test/security scan, no deleting tests to pass, evidence-based completion |
 | **harness-redirect** | Catches failure patterns early | Patch tower detection, hallucination spiral, auto-checkpoint & rollback |
 
@@ -46,7 +46,7 @@ cp -r civr-skills/harness-*/ your-project/skills/
 
 ### Option 4: Cherry-pick rules
 
-Each SKILL.md is self-contained. Read through them and copy the rules that matter most to your project directly into your `CLAUDE.md`.
+Each SKILL.md is self-contained. Read through them and copy the rules that matter most to your project directly into your `AGENTS.md`.
 
 ## Customization
 
@@ -61,7 +61,7 @@ Each skill has `<!-- CUSTOMIZE -->` markers at the sections you should adjust:
 
 1. **Skills are signposts, not firewalls.** SKILL.md rules are natural language instructions — the model *usually* follows them, but may ignore them under context pressure. For hard guarantees, layer with Docker isolation and hooks.
 2. **Default to minimal friction.** Start with read-only mode. Escalate permissions only when needed.
-3. **Every correction becomes a rule.** The knowledge crystallization loop: you correct AI → it suggests adding the correction to CLAUDE.md → next session starts smarter.
+3. **Every correction becomes a rule.** The knowledge crystallization loop: you correct AI → it suggests adding the correction to AGENTS.md → next session starts smarter.
 4. **Less is more.** Fewer, sharper rules beat a wall of text. Each SKILL.md stays under 5K tokens.
 
 ## The CIVR Framework
