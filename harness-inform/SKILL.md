@@ -1,3 +1,13 @@
+---
+name: harness-inform
+description: "CIVR Inform layer: auto-scans projects, generates context files, runs knowledge crystallization loop. Use when starting a new project or when AI keeps making context-related mistakes."
+version: 1.0.0
+metadata:
+  openclaw:
+    emoji: "📋"
+    homepage: https://github.com/linan109/civr-skills
+---
+
 # harness-inform
 
 Make sure AI understands the project before it starts guessing.

@@ -1,3 +1,14 @@
+---
+name: harness-redirect
+description: "CIVR Redirect layer: detects failure patterns (patch tower, hallucination spiral, sycophancy trap, over-engineering, test cheating), auto-checkpoints with git, enables quick rollback. Use when AI is stuck in a loop or producing increasingly wrong output."
+version: 1.0.0
+metadata:
+  openclaw:
+    always: true
+    emoji: "🔄"
+    homepage: https://github.com/linan109/civr-skills
+---
+
 # harness-redirect
 
 Catch failure patterns before they compound. The goal is not to prevent all mistakes — it's to prevent small mistakes from becoming big ones.

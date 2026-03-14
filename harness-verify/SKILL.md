@@ -1,3 +1,14 @@
+---
+name: harness-verify
+description: "CIVR Verify layer: forces lint/test/security checks after code changes, blocks false completion claims, prevents test cheating. Use when AI modifies code to ensure changes are actually correct."
+version: 1.0.0
+metadata:
+  openclaw:
+    always: true
+    emoji: "✅"
+    homepage: https://github.com/linan109/civr-skills
+---
+
 # harness-verify
 
 Code that hasn't been verified is not "done." Period.

@@ -1,3 +1,14 @@
+---
+name: harness-constrain
+description: "CIVR Constraint layer: enforces permission tiers, blocks dangerous operations, prevents scope creep. Use when starting any coding task to set behavioral boundaries."
+version: 1.0.0
+metadata:
+  openclaw:
+    always: true
+    emoji: "🛡️"
+    homepage: https://github.com/linan109/civr-skills
+---
+
 # harness-constrain
 
 Draw red lines before AI starts working. Not in your head — in the config.

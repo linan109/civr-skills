@@ -1,6 +1,6 @@
-# CIVR Skills — Harness Skill Pack for Claude Code
+# CIVR Skills — Harness Skill Pack for OpenClaw
 
-CIVR (Constrain, Inform, Verify, Redirect) is a methodology for working effectively with AI coding assistants. This Skill Pack turns that methodology into installable, enforceable rules for [Claude Code](https://claude.com/claude-code).
+CIVR (Constrain, Inform, Verify, Redirect) is a methodology for working effectively with AI coding assistants. This Skill Pack turns that methodology into installable, enforceable rules for [OpenClaw](https://github.com/openclaw/openclaw).
 
 > From the book *《驾驭AI编程》(Harness AI Programming)* by Li Nan.
 
@@ -21,46 +21,48 @@ Methodologies help — if you remember to follow them. At 2am fixing a productio
 
 ## Quick Start
 
-### Option 1: Copy into your project
+### Option 1: Install via ClawHub
 
 ```bash
-# Clone this repo
+clawhub install harness-constrain
+clawhub install harness-inform
+clawhub install harness-verify
+clawhub install harness-redirect
+```
+
+### Option 2: Manual install
+
+```bash
 git clone https://github.com/linan109/civr-skills.git
-
-# Copy the skills you want into your project
-cp -r civr-skills/harness-constrain/ your-project/.claude/skills/
-cp -r civr-skills/harness-verify/ your-project/.claude/skills/
-# ... etc
+cp -r civr-skills/harness-*/ ~/.openclaw/skills/
 ```
 
-### Option 2: Use as a git submodule
+### Option 3: Project-level install
 
 ```bash
-cd your-project
-git submodule add https://github.com/linan109/civr-skills.git .claude/skills/civr
+# Copy into your project's skills directory
+cp -r civr-skills/harness-*/ your-project/skills/
 ```
 
-### Option 3: Cherry-pick rules into CLAUDE.md
+### Option 4: Cherry-pick rules
 
 Each SKILL.md is self-contained. Read through them and copy the rules that matter most to your project directly into your `CLAUDE.md`.
 
 ## Customization
 
-Each skill has clearly marked sections you should customize:
+Each skill has `<!-- CUSTOMIZE -->` markers at the sections you should adjust:
 
 - **harness-constrain**: Add your project's protected files/directories, adjust permission tiers
 - **harness-inform**: Configure tech stack detection, add project-specific context rules
 - **harness-verify**: Add project-specific test/lint commands, configure security scan keywords
 - **harness-redirect**: Add custom failure patterns from your own experience, adjust retry thresholds
 
-See the `<!-- CUSTOMIZE -->` markers in each SKILL.md.
-
 ## Design Principles
 
 1. **Skills are signposts, not firewalls.** SKILL.md rules are natural language instructions — the model *usually* follows them, but may ignore them under context pressure. For hard guarantees, layer with Docker isolation and hooks.
 2. **Default to minimal friction.** Start with read-only mode. Escalate permissions only when needed.
 3. **Every correction becomes a rule.** The knowledge crystallization loop: you correct AI → it suggests adding the correction to CLAUDE.md → next session starts smarter.
-4. **Less is more.** Fewer, sharper rules beat a wall of text. Keep each SKILL.md under 5K tokens.
+4. **Less is more.** Fewer, sharper rules beat a wall of text. Each SKILL.md stays under 5K tokens.
 
 ## The CIVR Framework
 
@@ -71,7 +73,7 @@ V — Verify:    How do we confirm it's right? (not just "it runs")
 R — Redirect:  What do we do when it's wrong? (pattern recognition + rollback)
 ```
 
-For the full methodology, see *《驾驭AI编程》* or visit the book's companion site.
+For the full methodology, see *《驾驭AI编程》* (publishing 2026).
 
 ## License
 
