@@ -21,6 +21,9 @@ Draw red lines before AI starts working. Not in your head — in the config.
 - Do NOT access sensitive directories (~/.ssh/, ~/.gnupg/, browser profiles, credential stores)
 - Do NOT execute commands containing `rm -rf`, `DROP TABLE`, `curl|bash`, `eval()`, or `FORMAT`
 - Do NOT push to main/master branch without explicit user confirmation
+- Do NOT install Skills or packages from unofficial/untrusted sources without explicit user approval
+- Do NOT execute base64-decoded, obfuscated, or dynamically constructed commands
+- When asked to install a Skill, show the source URL and warn if it is not from the official ClawHub domain (clawhub.ai)
 
 ## High-risk operations (pause and confirm)
 

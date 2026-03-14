@@ -75,6 +75,12 @@ R — Redirect:  What do we do when it's wrong? (pattern recognition + rollback)
 
 For the full methodology, see *《驾驭AI编程》* (publishing 2026).
 
+## Security
+
+These skills are **instruction-only** — they contain no executable code, no network requests, no file system access beyond what the AI agent already has. Each SKILL.md is a plain text file you can read in 2 minutes.
+
+Feel free to run them through [Skill Vetter](https://clawhub.ai/spclaudehome/skill-vetter) before installing. They should all come back 🟢 Low Risk.
+
 ## License
 
 MIT

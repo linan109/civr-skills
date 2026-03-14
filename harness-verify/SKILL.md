@@ -54,6 +54,18 @@ Check the changed code for these 9 items:
 ### 4. Change summary
 Generate a one-paragraph natural language summary of what changed and why. Present to user for confirmation.
 
+## Comprehension check
+
+After presenting the change summary, remind the user:
+
+**If any part of the generated code is unclear to you, ask the AI to explain it in detail before accepting.**
+
+Two outcomes, both wins:
+- AI explains clearly → you learned something new, your future prompts get more precise
+- AI can't explain coherently → you caught a hallucination, reject the code
+
+Do NOT accept code you cannot explain to a colleague. "It works" is not understanding.
+
 ## Escalated verification (for high-risk changes)
 
 <!-- CUSTOMIZE: adjust trigger keywords for your domain -->
